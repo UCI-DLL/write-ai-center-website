@@ -11,6 +11,7 @@ const nav = [
   ["Training & Events", "/training-events"],
   ["News", "/news"],
   ["People", "/people"],
+  ["Partners", "/partners"],
 ];
 
 function matchesPath(pathname: string, href: string) {
