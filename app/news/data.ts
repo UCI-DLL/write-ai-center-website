@@ -31,11 +31,11 @@ export const newsStories: NewsStory[] = [
   title: "Can AI help college students become better writers? A first-of-its-kind research center at UC Irvine is set to find out",
   date: "September 20, 2026",
   sortDate: "2026-09-20",
-  summary: "ADD A 1–2 SENTENCE SUMMARY HERE.",
+ summary: "The Orange County Register highlights the launch of the WRITE AI Center and its research on how generative AI can support college writing instruction.",
   paragraphs: [
     [
       {
-        text: "ADD THE ARTICLE BLURB OR DESCRIPTION YOU WANT TO APPEAR ON THE WRITE AI SITE HERE.",
+        text: "The Orange County Register recently featured the launch of the WRITE AI Center and its five-year effort to study how generative AI can support college writing instruction. The article highlights the Center’s planned national research, work with community colleges, and evaluation of PapyrusAI as a tool for supporting students’ writing and AI literacy.",
       },
     ],
   ],
