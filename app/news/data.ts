@@ -26,6 +26,25 @@ export type NewsStory = {
 
 export const newsStories: NewsStory[] = [
   {
+  slug: "oc-register-write-ai-research-center",
+  category: "Center News",
+  title: "Can AI help college students become better writers? A first-of-its-kind research center at UC Irvine is set to find out",
+  date: "September 20, 2026",
+  sortDate: "2026-09-20",
+  summary: "ADD A 1–2 SENTENCE SUMMARY HERE.",
+  paragraphs: [
+    [
+      {
+        text: "ADD THE ARTICLE BLURB OR DESCRIPTION YOU WANT TO APPEAR ON THE WRITE AI SITE HERE.",
+      },
+    ],
+  ],
+  cta: {
+    label: "Read the Orange County Register Article",
+    href: "https://www.ocregister.com/2026/09/20/can-ai-help-college-students-become-better-writers-a-first-of-its-kind-research-center-at-uc-irvine-is-set-to-find-out/",
+  },
+},
+  {
     slug: "papyrusai-november-professional-development-session",
     category: "Events",
     title: "PapyrusAI November Professional Development Session",
