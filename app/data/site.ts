@@ -1,3 +1,6 @@
+export const papyrusDemoRequestUrl =
+  "https://docs.google.com/forms/d/e/1FAIpQLScU_D6BxHp51Lv0fzdnvRGCT4sw7shqC6jzXcfIoFGVUA-PTw/viewform?usp=header";
+
 export const researchAreas = [
   {
     number: "01",

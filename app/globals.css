@@ -41,6 +41,8 @@ h3 { line-height: 1.18; }
 .button-current { border-color: var(--orange); background: var(--orange); }
 .button-ghost { background: transparent; color: var(--ink); }
 .button-light { background: var(--cream); color: var(--ink-dark); border-color: var(--cream); }
+.button-accent { background: var(--gold); color: var(--ink-dark); border-color: var(--gold); }
+.button-accent:hover { background: var(--orange); }
 .mobile-menu { display: none; position: relative; }
 .mobile-menu summary { cursor: pointer; font-weight: 800; text-transform: uppercase; font-size: .75rem; }
 .mobile-menu nav { position: absolute; z-index: 20; top: 2.2rem; right: 0; width: 230px; padding: 1rem; display: grid; gap: .75rem; background: var(--paper); border: 1px solid var(--line); box-shadow: 0 16px 30px rgba(14,42,54,.14); }

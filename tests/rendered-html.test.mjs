@@ -53,6 +53,18 @@ test("embeds the PapyrusAI introduction video", async () => {
   assert.match(html, /Introduction to PapyrusAI/);
 });
 
+test("links to the PapyrusAI demo request form from the homepage and PapyrusAI page", async () => {
+  const demoForm = /docs\.google\.com\/forms\/d\/e\/1FAIpQLScU_D6BxHp51Lv0fzdnvRGCT4sw7shqC6jzXcfIoFGVUA-PTw\/viewform/;
+
+  for (const path of ["/", "/papyrus-ai"]) {
+    const response = await render(path);
+    assert.equal(response.status, 200, path);
+    const html = await response.text();
+    assert.match(html, /Request Demo Access/i, path);
+    assert.match(html, demoForm, path);
+  }
+});
+
 test("renders the complete Fall 2026 newsletter with its requested visuals", async () => {
   const response = await render("/newsletter/fall-2026-issue-01");
   assert.equal(response.status, 200);
