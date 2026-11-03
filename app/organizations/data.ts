@@ -3,6 +3,7 @@ export type Organization = {
   name: string;
   shortName: string;
   about: string;
+  additionalAbout?: string;
   role: string;
   website: string;
 };
@@ -26,9 +27,10 @@ export const organizations: Organization[] = [
   },
   {
     slug: "california-community-colleges-foothill-de-anza",
-    name: "California Community Colleges’ Digital Center for Innovation, Transformation and Equity",
-    shortName: "California Community Colleges’ Digital Center for Innovation, Transformation and Equity",
+    name: "California Community Colleges",
+    shortName: "California Community Colleges",
     about: "CCC activity is led by its Digital Center for Innovation, Transformation and Equity. The Digital Center is a partnership between Foothill-De Anza Community College District and the CCC Chancellor’s Office. It integrates generative AI and digital innovations across the system’s 116 institutions to prepare the CCC’s 2.2 million students for success in an increasingly AI-driven professional landscape.",
+    additionalAbout: "Local CCCs serving as pilot research sites include Irvine Valley College, Reedley College, and Santa Ana College, serving a total of more than 80,000 students across urban, suburban, and rural communities.",
     role: "The Digital Center will lead the annual Futures Summit, the webinars, and the professional development certificate program. It will also organize implementation and evaluation activities in three diverse community college districts across the state.",
     website: "https://cccdigitalcenter.org/",
   },
@@ -37,6 +39,7 @@ export const organizations: Organization[] = [
     name: "Virginia Community College System",
     shortName: "Virginia Community College System",
     about: "The VCCS is a network of 23 community colleges providing affordable, accessible, and high-quality education, including associate degrees, certificates, workforce training, and transfer programs. With over 250,000 students enrolled annually, the system plays a crucial role in workforce development, economic mobility, and lifelong learning, and has been a national leader in educational reform with technology.",
+    additionalAbout: "Local pilot research sites include Northern Virginia Community College and Virginia Western Community College, which together serve more than 60,000 students across diverse regions of the state.",
     role: "VCCS will organize implementation and evaluation activities across diverse community colleges in different regions of Virginia. It will also advise on the development of training and educational resources that serve the needs of community colleges.",
     website: "https://www.vccs.edu/",
   },
@@ -44,7 +47,7 @@ export const organizations: Organization[] = [
     slug: "houston-community-college",
     name: "Houston City College",
     shortName: "Houston City College",
-    about: "Houston City College is an open-admission, public institution of higher education serving over 100,000 students across 19 campuses. It offers a high-quality, affordable education for academic advancement, workforce training, career development, and lifelong learning to prepare individuals for life and work in a global and technological society. It serves over 100,000 students in 19 campuses.",
+    about: "Houston City College is an open-admission, public institution of higher education serving over 100,000 students across 19 campuses. It offers a high-quality, affordable education for academic advancement, workforce training, career development, and lifelong learning to prepare individuals for life and work in a global and technological society.",
     role: "HCC will serve as a site of the Center’s development, implementation, and evaluation activities, focusing on the role of PapyrusAI in introductory, foundational, and disciplinary writing courses.",
     website: "https://www.hccs.edu/",
   },

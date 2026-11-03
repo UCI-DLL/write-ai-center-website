@@ -101,6 +101,28 @@ test("server-renders every partner organization profile", async () => {
   }
 });
 
+test("renders the approved partner organization copy", async () => {
+  const partnersResponse = await render("/partners");
+  assert.equal(partnersResponse.status, 200);
+  const partnersHtml = await partnersResponse.text();
+  assert.match(partnersHtml, /California Community Colleges/);
+  assert.doesNotMatch(partnersHtml, /California Community Colleges(?:’|&rsquo;) Digital Center/);
+
+  const californiaResponse = await render("/organizations/california-community-colleges-foothill-de-anza");
+  assert.equal(californiaResponse.status, 200);
+  const californiaHtml = await californiaResponse.text();
+  assert.match(californiaHtml, /Local CCCs serving as pilot research sites include Irvine Valley College, Reedley College, and Santa Ana College/);
+
+  const virginiaResponse = await render("/organizations/virginia-community-college-system");
+  assert.equal(virginiaResponse.status, 200);
+  const virginiaHtml = await virginiaResponse.text();
+  assert.match(virginiaHtml, /Local pilot research sites include Northern Virginia Community College and Virginia Western Community College/);
+
+  const houstonResponse = await render("/organizations/houston-community-college");
+  assert.equal(houstonResponse.status, 200);
+  assert.doesNotMatch(await houstonResponse.text(), /It serves over 100,000 students in 19 campuses/);
+});
+
 test("server-renders the newly completed people profiles", async () => {
   for (const [path, expected] of [
     ["/people/renzhe-yu", /AEQUITAS Lab/],

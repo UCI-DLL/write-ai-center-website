@@ -58,7 +58,7 @@ export const peopleSections: PeopleSection[] = [
 export const partnerOrganizations = [
   { name: "UC Irvine Digital Learning Lab", href: "/organizations/uc-irvine-digital-learning-lab" },
   { name: "MDRC", href: "/organizations/mdrc" },
-  { name: "California Community Colleges’ Digital Center for Innovation, Transformation and Equity", href: "/organizations/california-community-colleges-foothill-de-anza" },
+  { name: "California Community Colleges", href: "/organizations/california-community-colleges-foothill-de-anza" },
   { name: "Virginia Community College System", href: "/organizations/virginia-community-college-system" },
   { name: "Houston City College", href: "/organizations/houston-community-college" },
 ];

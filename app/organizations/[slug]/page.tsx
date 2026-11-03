@@ -27,7 +27,7 @@ export default async function OrganizationProfilePage({ params }: { params: Prom
         <div className="organization-profile-identity"><p className="eyebrow">Partner organization</p><h1>{organization.name}</h1></div>
       </section>
       <section className="section profile-content organization-profile-content">
-        <article className="profile-biography"><p className="resource-kicker">About</p><h2>{organization.shortName}</h2><p>{organization.about}</p></article>
+        <article className="profile-biography"><p className="resource-kicker">About</p><h2>{organization.shortName}</h2><p>{organization.about}</p>{organization.additionalAbout && <p>{organization.additionalAbout}</p>}</article>
         <article><p className="resource-kicker">WRITE AI</p><h2>Role in the Center</h2><p>{organization.role}</p></article>
         <article><p className="resource-kicker">More information</p><h2>Website</h2><ul className="profile-links"><li><Link href={organization.website} target="_blank" rel="noreferrer">Visit {organization.shortName}<span aria-hidden="true">↗</span></Link></li></ul></article>
       </section>
