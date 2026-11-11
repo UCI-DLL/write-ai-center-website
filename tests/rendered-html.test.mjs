@@ -22,7 +22,7 @@ test("server-renders the WRITE AI homepage", async () => {
   assert.match(html, /Improving Writing Education in the Age of AI/);
   assert.match(html, /Explore our research/i);
   assert.match(html, /PapyrusAI/i);
-  assert.match(html, /Grant R305C260035 to the Regents of the University of California/);
+  assert.match(html, /grant R305C26035 to the University of California, Irvine/);
   assert.doesNotMatch(html, /codex-preview|Your site is taking shape|react-loading-skeleton/i);
 });
 
@@ -93,7 +93,6 @@ test("server-renders every partner organization profile", async () => {
     ["/organizations/mdrc", /Center for Data Insights/i],
     ["/organizations/california-community-colleges-foothill-de-anza", /Digital Center for Innovation, Transformation and Equity/i],
     ["/organizations/virginia-community-college-system", /network of 23 community colleges/i],
-    ["/organizations/houston-community-college", /open-admission, public institution/i],
   ]) {
     const response = await render(path);
     assert.equal(response.status, 200, path);
@@ -117,10 +116,15 @@ test("renders the approved partner organization copy", async () => {
   assert.equal(virginiaResponse.status, 200);
   const virginiaHtml = await virginiaResponse.text();
   assert.match(virginiaHtml, /Local pilot research sites include Northern Virginia Community College and Virginia Western Community College/);
+});
 
-  const houstonResponse = await render("/organizations/houston-community-college");
-  assert.equal(houstonResponse.status, 200);
-  assert.doesNotMatch(await houstonResponse.text(), /It serves over 100,000 students in 19 campuses/);
+test("removes the former partner from public pages and its organization profile", async () => {
+  for (const path of ["/", "/partners", "/people", "/about", "/organizations/houston-community-college"]) {
+    const response = await render(path);
+    assert.equal(response.status, 200, path);
+    const html = await response.text();
+    assert.doesNotMatch(html, /Houston City College|Houston Community College|\bHCC\b|hccs\.edu/i, path);
+  }
 });
 
 test("server-renders the newly completed people profiles", async () => {

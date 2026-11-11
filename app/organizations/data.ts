@@ -43,14 +43,6 @@ export const organizations: Organization[] = [
     role: "VCCS will organize implementation and evaluation activities across diverse community colleges in different regions of Virginia. It will also advise on the development of training and educational resources that serve the needs of community colleges.",
     website: "https://www.vccs.edu/",
   },
-  {
-    slug: "houston-community-college",
-    name: "Houston City College",
-    shortName: "Houston City College",
-    about: "Houston City College is an open-admission, public institution of higher education serving over 100,000 students across 19 campuses. It offers a high-quality, affordable education for academic advancement, workforce training, career development, and lifelong learning to prepare individuals for life and work in a global and technological society.",
-    role: "HCC will serve as a site of the Center’s development, implementation, and evaluation activities, focusing on the role of PapyrusAI in introductory, foundational, and disciplinary writing courses.",
-    website: "https://www.hccs.edu/",
-  },
 ];
 
 export function getOrganization(slug: string) {

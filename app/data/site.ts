@@ -73,7 +73,6 @@ export const partners = [
   { name: "MDRC", href: "/organizations/mdrc" },
   { name: "California Community Colleges", href: "/organizations/california-community-colleges-foothill-de-anza" },
   { name: "Virginia Community College System", href: "/organizations/virginia-community-college-system" },
-  { name: "Houston City College", href: "/organizations/houston-community-college" },
 ];
 
 export const resources = [
