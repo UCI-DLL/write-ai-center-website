@@ -104,6 +104,8 @@ test("renders the approved partner organization copy", async () => {
   const partnersResponse = await render("/partners");
   assert.equal(partnersResponse.status, 200);
   const partnersHtml = await partnersResponse.text();
+  assert.match(partnersHtml, />UC Irvine<\/a>/);
+  assert.doesNotMatch(partnersHtml, />UC Irvine Digital Learning Lab<\/a>/);
   assert.match(partnersHtml, /California Community Colleges/);
   assert.doesNotMatch(partnersHtml, /California Community Colleges(?:’|&rsquo;) Digital Center/);
 
